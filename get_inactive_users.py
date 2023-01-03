@@ -31,11 +31,6 @@ while True:
         break
     eps_querystring["offset"] += 5
 
-# Serializing and writing to services.json - used for testing display only
-json_object = json.dumps(list_of_eps, indent=4)
-with open("services.json", "w") as outfile:
-    outfile.write(json_object)
-
 # # CSV writer - opens a csv with defined fields to be written to
 with open("inactive_users.csv", "w", newline="") as csvfile:
     fieldnames = ["schedule_name","html_url","deleted_user","deleted_at","user_url"]
